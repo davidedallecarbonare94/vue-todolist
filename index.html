@@ -17,14 +17,14 @@
         <div class="tasks" v-if="(tasks.length > 0)"><!-- questa è la lista di tasks -->
             <div class="task" v-for="(task, index) in tasks">
                 {{ task }}
-                <i class="fas fa-check-circle" @click="moveToComplete" ></i>
+                <i class="fas fa-check-circle" @click="moveToComplete(index)"></i>
                 <i class="fas fa-times-circle" @click="removeTask(index)"></i>
             </div>
         </div>
         <div class="no_tasks" v-else="(tasks.length = 0)">
             <p>Complimenti! Sei diventato il Re dei Pirati!</p>
         </div>
-        <div class="completed_tasks">
+        <div class="completed_tasks" v-for="complete in completedTasks">
             {{ completedTasks }}
         </div>
     </div>
