@@ -26,7 +26,12 @@ const app = new Vue({
     },
     methods: {
         addTask() {
-            this.tasks.push(this.newTask)
+            if (this.newTask === "") {
+                alert("You must insert a task if you want to become the Pirate King")
+            } else {
+                this.tasks.push(this.newTask)
+                this.newTask = ""
+            }
             this.newTask = ""
         },
         removeTask(index) {
