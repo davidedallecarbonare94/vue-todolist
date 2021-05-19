@@ -25,24 +25,31 @@ const app = new Vue({
     },
     methods: {
         addTask() {
-           /*  if (this.newTask = "") {
+           if (this.newTask = "") {
                 alert("Non puoi diventare il Re dei Pirati se non ti impegni!")
-            } */
+            } 
             this.tasks.push(this.newTask)
             this.newTask = ""
         },
         removeTask(index) {
             this.tasks.splice(index, 1)
         },
-        moveToComplete(index) {
+        /* moveToComplete(index) {
             this.tasks.push(this.completedTasks)
             this.tasks.splice(index, 1)
             console.log(this.completedTasks);
-        }
+        } */
         
 
 
     },
+    mounted() {
+        document.addEventListener("keyup", (element) => {
+            if (element.key === "Enter") {
+                this.addTask()
+            }
+        })
+    }
    
 
 
