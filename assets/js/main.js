@@ -14,8 +14,7 @@ Quando l'utente inserisce una task ha due modi per salvarla: o preme il pulsante
 const app = new Vue({
     el: "#root",
     data: {
-        minLength: 5,
-        completedTasks: '',
+        completeTasks: [],
         newTask: '',
         tasks: [
             "Defeat Kaido",
@@ -40,7 +39,10 @@ const app = new Vue({
         updateMyTasks() {
             this.tasks.name = this.tasks.name
         },
-
+        completedTasks(index) {
+            console.log(this.tasks[index]);
+            
+        }
 
 
     },
