@@ -18,10 +18,10 @@ const app = new Vue({
         completedTasks: '',
         newTask: '',
         tasks: [
-            {name: "Defeat Kaido"}, 
-            {name: "Defeat Big Mom"}, 
-            {name: "Find the One Piece"}, 
-            {name: "Become the King of Pirates"}, 
+            "Defeat Kaido",
+            "Defeat Big Mom",
+            "Find the One Piece",
+            "Become the King of Pirates",
         ],
     },
     methods: {
@@ -35,12 +35,13 @@ const app = new Vue({
         updateMyTasks() {
             this.tasks.name = this.tasks.name
         },
-        
 
-        
+
+
     },
-    
-   
-d
+
+
+
+
 
 })

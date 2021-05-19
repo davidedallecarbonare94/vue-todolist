@@ -8,7 +8,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(https://www.opgt.it/wp-content/uploads/2020/06/mugiwara.jpg);
+    background-image: url(https://wallpapercave.com/wp/wp2043378.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 1000px;
@@ -30,4 +30,24 @@ h1{
     background-color: salmon;
     border: 1px solid lightgray;
     border-radius: 5px;
+}
+.task input{
+    border: 1px solid black;
+    background-color: transparent;
+    color: orange;
+    border: none;
+    font-size: 1.5rem;
+}
+.task i{
+    font-size: 1.5rem;
+    color: darkorange;
+}
+.no_tasks p{
+    font-size: 2rem;
+    font-family: 'Goblin One', cursive;
+    color: red;
+}
+.no_tasks p i{
+    font-size: 2rem;
+    color: gold;
 }

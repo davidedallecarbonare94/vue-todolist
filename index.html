@@ -19,13 +19,13 @@
         </div>
         <div class="tasks" v-if="(tasks.length > 0)"><!-- questa è la lista di tasks -->
             <div class="task" v-for="(task, index) in tasks">
-                <input class="list_of_tasks" v-model="task.name" @keyup.enter="updateMyTasks"> <!-- qui permetto di aggiornare le tasks -->
+                <input class="list_of_tasks" v-model="task" @keyup.enter="updateMyTasks"> <!-- qui permetto di aggiornare le tasks -->
                 <i class="fas fa-check-circle" @click="removeTask(index)"></i>
                 <i class="fas fa-times-circle" @click="removeTask(index)"></i><!-- qui permetto di rimuovere le tasks -->
             </div>
         </div>
         <div class="no_tasks" v-else="(tasks.length = 0)"> <!-- questo è il messaggio quando le tasks sono finite -->
-            <p>Great Job! Roger would be proud of you!</p>
+            <p>Great Job! Roger would be proud of you!<i class="fas fa-skull-crossbones"></i></p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
