@@ -14,43 +14,33 @@ Quando l'utente inserisce una task ha due modi per salvarla: o preme il pulsante
 const app = new Vue({
     el: "#root",
     data: {
+        minLength: 5,
         completedTasks: '',
         newTask: '',
         tasks: [
-            "Defeat Kaido", 
-            "Defeat Big Mom", 
-            "Find the One Piece", 
-            "Become the King of Pirates", 
+            {name: "Defeat Kaido"}, 
+            {name: "Defeat Big Mom"}, 
+            {name: "Find the One Piece"}, 
+            {name: "Become the King of Pirates"}, 
         ],
     },
     methods: {
         addTask() {
-           if (this.newTask = "") {
-                alert("Non puoi diventare il Re dei Pirati se non ti impegni!")
-            } 
             this.tasks.push(this.newTask)
             this.newTask = ""
         },
         removeTask(index) {
             this.tasks.splice(index, 1)
         },
-        /* moveToComplete(index) {
-            this.tasks.push(this.completedTasks)
-            this.tasks.splice(index, 1)
-            console.log(this.completedTasks);
-        } */
+        updateMyTasks() {
+            this.tasks.name = this.tasks.name
+        },
         
 
-
+        
     },
-    mounted() {
-        document.addEventListener("keyup", (element) => {
-            if (element.key === "Enter") {
-                this.addTask()
-            }
-        })
-    }
+    
    
-
+d
 
 })

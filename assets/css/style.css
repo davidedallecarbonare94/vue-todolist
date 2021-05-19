@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://www.opgt.it/wp-content/uploads/2020/06/mugiwara.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1000px;
+}
+h1{
+    font-family: 'Goblin One', cursive;
+    padding: 1.5rem;
+    color: red;
+}
+.add_task{
+    padding-bottom: 1rem;
+}
+.add_task input {
+    border: 1px solid black;
+    background-color: transparent;
+}
+.add_task .btn{
+    padding: 0.25rem;
+    background-color: salmon;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
