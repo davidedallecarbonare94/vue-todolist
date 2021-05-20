@@ -41,7 +41,8 @@ const app = new Vue({
         },
         completedTasks(index) {
             console.log(this.tasks[index]);
-            this.task[index].push(this.completeTasks)
+            this.tasks.push(this.completeTasks)
+            console.log(this.completeTasks)
            /*  this.tasks.splice(index, 1)
             console.log(completeTasks); */
  

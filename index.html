@@ -38,7 +38,9 @@
                 <!-- questo è il messaggio quando le tasks sono finite -->
                 <p>Great Job! Roger would be proud of you!<i class="fas fa-skull-crossbones"></i></p>
             </div>
-
+            <div class="completed_tasks" v-for="(task, index) in completedTasks">
+                <input v-model="completeTasks[index]">
+            </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
