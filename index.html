@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Js ToDo List</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Goblin+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div id="root" class="container">
-        <h1>What to do to become the King Of Pirates</h1>
-        <div class="add_task" > <!-- qui aggiungo una task -->
-            <input placeholder="Insert here your task" v-model="newTask" @keyup.enter="addTask">
-            <button @click="addTask" class="btn">Add Task</button>
-        </div>
-        <div class="tasks" v-if="(tasks.length > 0)"><!-- questa è la lista di tasks -->
-            <div class="task" v-for="(task, index) in tasks">
-                <input class="list_of_tasks" v-model="tasks[index]" @keyup.enter="updateMyTasks"> <!-- qui permetto di aggiornare le tasks -->
-                <i class="fas fa-check-circle green" @click="removeTask(index)"></i>
-                <i class="fas fa-times-circle red" @click="removeTask(index)"></i><!-- qui permetto di rimuovere le tasks -->
+        <div class="light_background">
+
+            <h1>What to do to become the King Of Pirates</h1>
+            <div class="add_task">
+                <!-- qui aggiungo una task -->
+                <input placeholder="Insert here your task" v-model="newTask" @keyup.enter="addTask">
+                <button @click="addTask" class="btn">Add Task</button>
             </div>
-        </div>
-        <div class="no_tasks" v-else="(tasks.length = 0)"> <!-- questo è il messaggio quando le tasks sono finite -->
-            <p>Great Job! Roger would be proud of you!<i class="fas fa-skull-crossbones"></i></p>
+            <div class="tasks" v-if="(tasks.length > 0)">
+                <!-- questa è la lista di tasks -->
+                <div class="task" v-for="(task, index) in tasks">
+                    <input class="list_of_tasks" v-model="tasks[index]" @keyup.enter="updateMyTasks">
+                    <!-- qui permetto di aggiornare le tasks -->
+                    <i class="fas fa-check-circle green" @click="completedTasks(index)"></i>
+                    <i class="fas fa-times-circle red" @click="removeTask(index)"></i>
+                    <!-- qui permetto di rimuovere le tasks -->
+                </div>
+            </div>
+            <div class="no_tasks" v-else="(tasks.length = 0)">
+                <!-- questo è il messaggio quando le tasks sono finite -->
+                <p>Great Job! Roger would be proud of you!<i class="fas fa-skull-crossbones"></i></p>
+            </div>
+
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
 
 <!-- <p contenteditable="true">This is an editable paragraph.</p> -->
